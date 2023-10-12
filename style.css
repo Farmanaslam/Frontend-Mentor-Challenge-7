@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700&family=Josefin+Sans:ital,wght@0,600;1,300;1,400&family=Lexend+Deca&family=Outfit:wght@400;700&family=Rubik:ital,wght@0,400;0,500;1,300&display=swap");
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --light-red-work: hsl(15, 100%, 70%);
+  --soft-blue-play: hsl(195, 74%, 62%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --soft-orange-selfcare: hsl(43, 84%, 65%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-color: var(--very-dark-blue);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+  font-family: "Rubik", sans-serif;
+}
+
+.leftcol {
+  width: 160px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.userimg {
+  width: 50px;
+  border: 2px solid white;
+  border-radius: 99999px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+.leftcol > .col1 {
+  background-color: var(--blue);
+  padding: 20px;
+  border-radius: 8px;
+}
+.leftcol > .col1 > p {
+  color: var(--pale-blue);
+  font-size: 10px;
+  opacity: 0.8;
+  margin-bottom: 2px;
+}
+.leftcol > .col1 > span > p {
+  color: whitesmoke;
+  gap: 5px;
+  font-size: 25px;
+  padding-bottom: 28px;
+}
+.leftcol > .col2 {
+  padding: 20px;
+  padding-top: 8px;
+  background-color: var(--dark-blue);
+}
+.leftcol > .col2 > ul {
+  margin-top: 8px;
+  list-style: none;
+}
+.leftcol > .col2 > ul > li {
+  color: var(--pale-blue);
+  font-size: 12px;
+  margin-bottom: 10px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.leftcol > .col2 > ul > li:nth-child(2) {
+  color: white;
+  opacity: 0.8;
+}
+.section{
+  display: flex;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 0px 20px;
+}
+
+.row .col1 , .row2 .col1{
+  background-color: var(--light-red-work);
+  width: 165px;
+  border-radius: 10px;
+  height: 150px;
+  margin-right:25px;
+}
+.row .col>img, .row2 .col>img{
+  width: 30px;
+  
+}
+.row .col,.row2 .col{
+  text-align: right;
+}
+.row .contentcol, .row2 .contentcol {
+  padding: 5px 15px 20px 20px;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+
+.col .work {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.col .work > p {
+  font-size: 12px;
+  color: white;
+}
+.col .work > img {
+  height: 4px;
+  width: 12px;
+  margin-right: 8px;
+  
+}
+.col .colfooter > h1 {
+  font-size: 35px;
+  color: white;
+  font-weight: lighter;
+  margin-top: 14px;
+}
+.col .colfooter > p {
+  font-size: 10px;
+  color: var(--pale-blue);
+  margin-top: 5px;
+  opacity: 0.8;
+}
+.row .col2, .row2 .col2{
+  background-color: var(--soft-blue-play);
+  width: 165px;
+  border-radius: 10px;
+  height: 150px;
+  margin-right:25px;
+}
+
+.row .col3, .row2 .col3{
+  background-color: var(--light-red-study);
+  width: 165px;
+  border-radius: 10px;
+  height: 150px;
+ 
+}
+.row2{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+.row2 .col1{
+  background-color: var(--lime-green-exercise);
+}
+.row2 .col2{
+  background-color: var(--violet-social);
+}
+.row2 .col3{
+  background-color: var(--soft-orange-selfcare);
+}
+.row2 .col1 .contentcol{
+  margin-top: 5px;
+}
+.row2 .col2>img{
+ width: 20px;
+}
+.row2 .col3>img{
+width: 26px;
+}
+.contentcol:hover{
+  background-color: var(--desaturated-blue);
+}
+ @media screen and (max-width:1000px) {
+  
+  .leftcol{
+     height: 300px;
+     position: absolute;
+     top:0;
+     margin-left: 20px;
+     margin-top: 10px;
+  }
+  .row{
+    display: block;
+ margin-top: 200px;
+  }
+  .row2{
+    display: block;
+   
+  }
+  .row .col,.row2 .col{
+    margin-bottom: 20px;
+
+  }
+  .cards{
+     margin-right: 30px;
+  }
+ }
